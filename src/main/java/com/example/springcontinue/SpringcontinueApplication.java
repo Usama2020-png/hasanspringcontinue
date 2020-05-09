@@ -18,9 +18,9 @@ public class SpringcontinueApplication {
     private BCryptPasswordEncoder passwordEncoder;
     @PostConstruct
     public void addUser() {
-        if (userRepository.findByUsername("test") == null) {
-            String pass = passwordEncoder.encode("12345");
-            ApplicationUser user = new ApplicationUser(1, "test", pass);
+        if (userRepository.findByUsername("hasan") == null) {
+            String pass = passwordEncoder.encode("123456");
+            ApplicationUser user = new ApplicationUser(1, "hasan", pass);
             userRepository.save(user);
         }
     }
